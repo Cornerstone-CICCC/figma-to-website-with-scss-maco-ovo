@@ -47,7 +47,6 @@ a {
 .highlight-bg {
   background-color: #308ce8;
   color: #ffffff;
-  padding: 0 8px;
 }
 
 .site-header {
@@ -176,6 +175,14 @@ section {
 
 .portfolios-section .portfolio-text-content {
   margin-bottom: 50px;
+}
+.portfolios-section .portfolio-text-content .highlight-bg1 {
+  background-color: #308ce8;
+  color: #ffffff;
+}
+.portfolios-section .portfolio-text-content .highlight-bg2 {
+  background-color: #308ce8;
+  color: #000000;
 }
 .portfolios-section .portfolio-text-content .vision-statement {
   font-size: 1.8rem;
