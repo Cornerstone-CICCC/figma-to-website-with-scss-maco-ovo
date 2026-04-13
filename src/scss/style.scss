@@ -1,0 +1,74 @@
+@use "sass:color";
+$font-main: "DM Sans", sans-serif;
+// ==========================================
+// 1. VARIABLES
+// ==========================================
+
+$color-bg-light: #f4f6f8;
+$color-bg-dark: #3a3a3a;
+$color-text-main: #000000;
+$color-text-light: #ffffff;
+$color-accent-blue: #308ce8;
+
+$font-main: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+// ==========================================
+// 2. GLOBAL RESETS & TYPOGRAPHY
+// ==========================================
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: $font-main;
+	color: $color-text-main;
+	background-color: #ffffff;
+	line-height: 1.6;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+// ==========================================
+// 3. COMPONENTS
+// ==========================================
+
+.btn {
+	display: inline-block;
+	padding: 12px 24px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+
+	&-primary {
+		background-color: $color-accent-blue;
+		color: $color-text-light;
+		border: none;
+		box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+
+		&:hover {
+			background-color: color.adjust($color-accent-blue, $lightness: -10%);
+		}
+	}
+}
+
+.highlight-bg {
+	background-color: $color-accent-blue;
+	color: $color-text-light;
+	padding: 0 8px;
+}
