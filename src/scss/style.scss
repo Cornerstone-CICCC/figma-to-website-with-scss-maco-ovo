@@ -72,3 +72,434 @@ a {
 	color: $color-text-light;
 	padding: 0 8px;
 }
+
+// ==========================================
+// 4. HEADER & NAV
+// ==========================================
+.site-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px;
+	position: absolute;
+	width: 100%;
+	top: 0;
+	z-index: 10;
+
+	.logo-container {
+		width: 180px;
+	}
+
+	.main-nav ul {
+		display: flex;
+		list-style: none;
+		gap: 30px;
+		align-items: center;
+
+		li a {
+			font-weight: 350;
+			letter-spacing: 1px;
+			transition: color 0.3s;
+
+			&:hover {
+				color: $color-accent-blue;
+			}
+		}
+
+		.nav-highlight a {
+			border: 1.5px solid $color-text-main;
+			padding: 8px 16px;
+
+			&:hover {
+				background-color: $color-text-main;
+				color: $color-text-light;
+			}
+		}
+	}
+}
+
+// ==========================================
+// 5. HERO SECTION
+// ==========================================
+.hero-section {
+	min-height: 100vh;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 5%;
+
+	background-image: url("../img/home-bg.svg");
+	background-size: cover;
+	background-position: center;
+
+	.social-sidebar {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+
+		a {
+			width: 42px;
+			height: 42px;
+			border-radius: 8px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			transition: transform 0.3s ease;
+
+			&:hover {
+				transform: translateY(-3px);
+			}
+
+			img {
+				width: 35px;
+			}
+		}
+	}
+
+	.hero-title {
+		text-align: center;
+
+		h1 {
+			font-size: 128px;
+			text-transform: uppercase;
+			letter-spacing: -2px;
+			margin-bottom: 15px;
+		}
+
+		p {
+			font-size: 48px;
+			text-transform: uppercase;
+			letter-spacing: 0.5px;
+			font-weight: 400;
+		}
+	}
+
+	.scroll-arrow {
+		display: flex;
+		align-items: center;
+
+		img {
+			height: 90px;
+		}
+	}
+}
+
+// ==========================================
+// 6. SHARED SECTION STYLES
+// ==========================================
+
+section {
+	padding: 80px 5%;
+}
+
+// ==========================================
+// 7. OUR STORY SECTION
+// ==========================================
+.story-section {
+	display: flex;
+	align-items: center;
+	gap: 60px;
+	background-color: $color-bg-light;
+
+	.story-text-content {
+		flex: 1;
+
+		h2 {
+			font-size: 2.5rem;
+			margin-bottom: 20px;
+		}
+
+		p {
+			margin-bottom: 30px;
+			font-size: 1.1rem;
+			color: lighten($color-text-main, 20%);
+		}
+	}
+
+	.story-img {
+		flex: 1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		.figure-stand {
+			width: 100px;
+		}
+		.logo {
+			width: 500px;
+		}
+	}
+}
+
+// ==========================================
+// 8. PORTFOLIOS SECTION
+// ==========================================
+.portfolios-section {
+	.portfolio-text-content {
+		margin-bottom: 50px;
+
+		.vision-statement {
+			font-size: 1.8rem;
+			margin-bottom: 30px;
+			line-height: 1.4;
+		}
+
+		.details {
+			border-left: 2px solid $color-text-main;
+			padding-left: 20px;
+			margin-left: 10px;
+			max-width: 700px;
+			font-size: 1.1rem;
+		}
+	}
+
+	.section-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 30px;
+
+		h2 {
+			font-size: 2rem;
+		}
+
+		.text-link {
+			font-weight: bold;
+			text-decoration: underline;
+			letter-spacing: 1px;
+		}
+	}
+
+	.portfolio-gallery {
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		gap: 15px;
+
+		img {
+			width: 100%;
+			height: auto;
+			object-fit: cover;
+			transition: transform 0.3s ease;
+
+			&:hover {
+				transform: scale(1.05);
+			}
+		}
+	}
+}
+
+// ==========================================
+// 9. MY UXSPACE SECTION
+// ==========================================
+.uxspace-section {
+	display: flex;
+	align-items: center;
+	gap: 60px;
+
+	.text-content {
+		flex: 1;
+
+		h2 {
+			font-size: 2.5rem;
+			margin-bottom: 30px;
+			display: flex;
+			align-items: center;
+			gap: 15px;
+
+			.inline-icon {
+				height: 50px;
+			}
+		}
+
+		p {
+			margin-bottom: 20px;
+			font-size: 1.1rem;
+		}
+	}
+
+	.visual-content {
+		flex: 1;
+	}
+}
+
+// ==========================================
+// 10. EVENTS SECTION
+// ==========================================
+.events-section {
+	display: flex;
+	align-items: center;
+	gap: 60px;
+	background-color: $color-bg-light;
+
+	.visual-content {
+		flex: 1;
+		position: relative;
+		min-height: 400px;
+
+		.poster-milano {
+			width: 70%;
+			box-shadow: -10px 10px 30px rgba(0, 0, 0, 0.1);
+		}
+	}
+
+	.text-content {
+		flex: 1;
+
+		h2 {
+			font-size: 2.5rem;
+			margin-bottom: 30px;
+			line-height: 1.2;
+		}
+
+		p {
+			margin-bottom: 20px;
+			font-size: 1.1rem;
+		}
+	}
+}
+
+// ==========================================
+// 11. CAREERS SECTION
+// ==========================================
+.careers-section {
+	display: flex;
+	align-items: center;
+	gap: 60px;
+
+	.text-content {
+		flex: 1;
+
+		h2 {
+			font-size: 2.5rem;
+			margin-bottom: 30px;
+		}
+
+		p {
+			margin-bottom: 20px;
+			font-size: 1.1rem;
+		}
+	}
+
+	.career-collage {
+		flex: 1;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 20px;
+
+		img {
+			width: 100%;
+			border-radius: 4px;
+		}
+	}
+}
+
+// ==========================================
+// 12. CONTACT ROW
+// ==========================================
+.contact-row {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	padding-bottom: 40px;
+
+	.contact-prompt p {
+		font-size: 1.2rem;
+		font-weight: 500;
+	}
+
+	.contact-heading h2 a {
+		font-size: 4rem;
+		letter-spacing: -2px;
+		border-bottom: 4px solid $color-text-main;
+		padding-bottom: 5px;
+
+		&:hover {
+			color: $color-accent-blue;
+			border-color: $color-accent-blue;
+		}
+	}
+
+	.contact-btn img {
+		width: 60px;
+		transition: transform 0.3s;
+
+		&:hover {
+			transform: translateX(10px);
+		}
+	}
+}
+
+// ==========================================
+// 13. FOOTER
+// ==========================================
+.site-footer {
+	background-color: $color-bg-dark;
+	color: $color-text-light;
+	padding: 60px 5%;
+
+	.footer-container {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		gap: 40px;
+	}
+
+	.footer-col {
+		flex: 1;
+		min-width: 200px;
+
+		h3,
+		h4 {
+			margin-bottom: 25px;
+			letter-spacing: 1px;
+		}
+
+		.footer-links {
+			list-style: none;
+
+			li {
+				margin-bottom: 15px;
+
+				a {
+					color: #cccccc;
+					transition: color 0.3s;
+
+					&:hover {
+						color: $color-text-light;
+					}
+				}
+			}
+		}
+
+		.involve-links {
+			display: flex;
+			gap: 50px;
+		}
+
+		.newsletter-link {
+			display: block;
+			margin-bottom: 40px;
+			font-weight: bold;
+			border-bottom: 1px solid $color-text-light;
+			padding-bottom: 5px;
+			width: max-content;
+		}
+
+		.social-links-footer ul {
+			display: flex;
+			list-style: none;
+			gap: 20px;
+
+			a img {
+				width: 24px;
+				filter: invert(1);
+				opacity: 0.8;
+				transition: opacity 0.3s;
+
+				&:hover {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
